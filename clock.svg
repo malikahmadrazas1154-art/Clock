@@ -1,0 +1,51 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle -->
+  <circle cx="150" cy="150" r="140" fill="white" stroke="black" stroke-width="4"/>
+
+  <!-- Center dot -->
+  <circle cx="150" cy="150" r="4" fill="black"/>
+
+  <!-- Hour numbers -->
+  <g font-family="Arial, sans-serif" font-size="20" fill="black" text-anchor="middle" dominant-baseline="middle">
+    <text x="150" y="35">12</text>
+    <text x="215" y="50">1</text>
+    <text x="255" y="100">2</text>
+    <text x="265" y="150">3</text>
+    <text x="255" y="200">4</text>
+    <text x="215" y="250">5</text>
+    <text x="150" y="265">6</text>
+    <text x="85" y="250">7</text>
+    <text x="45" y="200">8</text>
+    <text x="35" y="150">9</text>
+    <text x="45" y="100">10</text>
+    <text x="85" y="50">11</text>
+  </g>
+
+  <!-- Minute ticks -->
+  <g stroke="black">
+    <!-- Long ticks -->
+    <g stroke-width="3">
+      <line x1="150" y1="10" x2="150" y2="25"/>
+      <line x1="290" y1="150" x2="275" y2="150"/>
+      <line x1="150" y1="290" x2="150" y2="275"/>
+      <line x1="10" y1="150" x2="25" y2="150"/>
+    </g>
+
+    <!-- Short ticks -->
+    <g stroke-width="1">
+      <!-- Generated manually for clarity -->
+      <circle cx="150" cy="15" r="1"/>
+      <circle cx="215" cy="35" r="1"/>
+      <circle cx="265" cy="85" r="1"/>
+      <circle cx="285" cy="150" r="1"/>
+      <circle cx="265" cy="215" r="1"/>
+      <circle cx="215" cy="265" r="1"/>
+      <circle cx="150" cy="285" r="1"/>
+      <circle cx="85" cy="265" r="1"/>
+      <circle cx="35" cy="215" r="1"/>
+      <circle cx="15" cy="150" r="1"/>
+      <circle cx="35" cy="85" r="1"/>
+      <circle cx="85" cy="35" r="1"/>
+    </g>
+  </g>
+</svg>

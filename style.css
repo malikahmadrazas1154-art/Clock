@@ -1,0 +1,103 @@
+/* Luxury Modern Clock Styles */
+:root {
+    --gold: #d4af37;
+    --obsidian: #1a1a1a;
+    --silver: #bdc3c7;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#clock_container {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #2c2c2c 0%, #000000 100%);
+    border: 10px solid var(--gold);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8),
+        inset 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+/* Center Pin */
+#clock_container::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--gold);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#hour,
+#min,
+#sec {
+    position: absolute;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    /* Smooth movement UX */
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#hour {
+    background: linear-gradient(to top, var(--gold), #f1c40f);
+    height: 25%;
+    width: 2.2%;
+    left: 48.9%;
+    top: 25%;
+    z-index: 3;
+}
+
+#min {
+    background: linear-gradient(to top, var(--silver), #ffffff);
+    height: 38%;
+    width: 1.6%;
+    left: 49.2%;
+    top: 12%;
+    z-index: 2;
+}
+
+#sec {
+    background: #ff4d4d;
+    height: 45%;
+    width: 0.8%;
+    left: 49.6%;
+    top: 5%;
+    z-index: 4;
+}
+
+/* Luxury Tick Marks */
+.marker {
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background: var(--gold);
+    left: 49.4%;
+    top: 10px;
+    transform-origin: 50% 165px;
+}
+
+/* Adding 12, 3, 6, 9 positions via CSS rotation */
+.m3 {
+    transform: rotate(90deg);
+}
+
+.m6 {
+    transform: rotate(180deg);
+}
+
+.m9 {
+    transform: rotate(270deg);
+}
